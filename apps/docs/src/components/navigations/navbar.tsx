@@ -2,6 +2,7 @@ import {Disclosure, DisclosureButton, DisclosurePanel} from '@headlessui/react'
 import {classNames} from "@/utils/utils";
 import Link from "next/link";
 import {useRouter} from "next/router";
+import Image from "next/image";
 
 const navigation = [
     {name: 'Docs', href: '/docs/getting-started/installation'},
@@ -32,7 +33,7 @@ const Navbar = () => {
                     </div>
                     <div className="flex flex-1 items-center justify-center sm:items-stretch sm:justify-start">
                         <div className="flex gap-1 flex-shrink-0 items-center text-slate-700">
-                            <span className="font-semibold">Complete</span> <span className="font-light">UI</span>
+                            <Image src="/logo.svg" alt="Logo" height={100} width={100}/>
                         </div>
 
                     </div>
