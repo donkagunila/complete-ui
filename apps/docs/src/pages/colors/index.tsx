@@ -73,7 +73,7 @@ const Main = () => {
                                     <button
                                         key={item.name}
                                         onClick={() => handleCopy(item.hex)}
-                                        className={`group relative flex rounded-md w-full cursor-pointer flex-1 flex-col gap-2 text-xs text-gray-600 sm:h-auto sm:w-auto `}>
+                                        className={`group relative -z-10 flex rounded-md w-full cursor-pointer flex-1 flex-col gap-2 text-xs text-gray-600 sm:h-auto sm:w-auto `}>
 
                                         <div
                                             className="absolute right-4 top-3 bg-white [&>svg]:h-3.5 [&>svg]:w-3.5 opacity-0 transition-opacity p-1 rounded-md group-hover:opacity-100 &{} duration-300">
@@ -124,7 +124,7 @@ const Main = () => {
                                             <button
                                                 key={shade}
                                                 onClick={() => handleCopy(hex as string)}
-                                                className={`group cursor-pointer relative flex rounded-md w-full flex-1 flex-col gap-2 text-xs text-gray-600 sm:h-auto sm:w-auto `}>
+                                                className={`group cursor-pointer -z-0 relative flex rounded-md w-full flex-1 flex-col gap-2 text-xs text-gray-600 sm:h-auto sm:w-auto `}>
 
                                                 <div
                                                     className="absolute cursor-pointer  right-4 top-3 bg-white [&>svg]:h-3.5 [&>svg]:w-3.5 opacity-0 transition-opacity p-1 rounded-md group-hover:opacity-100 &{} duration-300">

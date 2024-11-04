@@ -18,7 +18,7 @@ const Navbar = () => {
 
     const {asPath} = useRouter();
     return (
-        <Disclosure as="nav" className="fixed top-0 w-full bg-white z-50 border-b border-slate-200">
+        <Disclosure as="nav" className="fixed z-10 top-0 w-full bg-white border-b border-slate-200">
             <div className="mx-auto max-w-7xl px-2 sm:px-6 lg:px-8">
                 <div className="relative flex h-16 items-center justify-between">
                     <div className="absolute inset-y-0 left-0 flex items-center sm:hidden">

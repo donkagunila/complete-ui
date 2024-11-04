@@ -1,8 +1,9 @@
-import React from 'react';
+import React, {useState} from 'react';
 import AppLayout from "@/components/layouts/AppLayout";
 import PageSectionHeader from "@/components/app/page-section-header";
 
 import {icons} from 'lucide-react';
+import {Button, Dialog} from "@complete-ui/core";
 
 
 const BlocksPage = () => {
@@ -11,6 +12,7 @@ const BlocksPage = () => {
 
 
     console.log(Object.entries(icon));
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
         <AppLayout>
@@ -24,6 +26,22 @@ const BlocksPage = () => {
                 />
 
                 <section className="mt-16 scroll-mt-20">
+
+                    <Button appName="testme">Test app</Button>
+
+                    <button onClick={() => setIsOpen(true)} className="px-4 py-2 bg-blue-500 text-white rounded-md">
+                        Open Dialog
+                    </button>
+
+
+                    <Dialog
+                        open={isOpen}
+                        onOpenChange={setIsOpen}
+                        title="Dialog Title"
+                        description="This is the description for the dialog.">
+                        <p>my details here</p>
+                    </Dialog>
+
                     <div className="grid scroll-mt-20 gap-8">
                         <div>
                             <div className="text-slate-700 font-semibold">
@@ -46,7 +64,7 @@ const BlocksPage = () => {
                             <div className="grid grid-cols-12 gap-2 p-2 overflow-hidden">
                                 {Object.entries(icons).map(([iconName, IconComponent]) => (
                                     <div key={iconName}
-                                         className="flex flex-col items-center h-[70px] w-[70px]  justify-center p-2 border rounded text-slate-600 hover:border-primary hover:bg-primary hover:text-white transition duration-300 cursor-pointer">
+                                         className="-z-0 flex flex-col items-center h-[70px] w-[70px]  justify-center p-2 border rounded text-slate-600 hover:border-primary hover:bg-primary hover:text-white transition duration-300 cursor-pointer">
                                         <IconComponent size={20}/>
                                         {/*<span className="text-xs mt-2 text-slate-500">{iconName}</span>*/}
                                     </div>

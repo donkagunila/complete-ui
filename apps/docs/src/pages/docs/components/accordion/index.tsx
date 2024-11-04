@@ -2,7 +2,7 @@ import React from 'react';
 import DocsLayout from "@/components/layouts/DocsLayout";
 import PageSectionHeader from "@/components/app/page-section-header";
 
-const DialogPage = () => {
+const Main = () => {
     return (
         <DocsLayout>
             <div>
@@ -16,4 +16,4 @@ const DialogPage = () => {
     );
 };
 
-export default DialogPage;
+export default Main;
