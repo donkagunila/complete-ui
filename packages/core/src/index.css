@@ -2,6 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
+
+.btn {
+    cursor: pointer !important;
+}
+
 .DialogOverlay {
     @apply bg-slate-800/70 fixed;
     position: fixed;
