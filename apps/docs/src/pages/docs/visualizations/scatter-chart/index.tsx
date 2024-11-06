@@ -8,11 +8,11 @@ const Main = () => {
 
             <PageSectionHeader
                 pageTitle="Visualizations"
-                title="Bar Chart"
-                subTitle="An area chart displays quantitative data graphically. It is based on the line chart but the area between x-axis and line is emphasized with color."/>
+                title="Scatter Chart"
+                subTitle="A scatter chart displays individual data points as dots across the x and y axes. It's useful for showing relationships or correlations between two variables."/>
 
-           <div>Bar Chart component here</div>
-            
+            <div>Bar Chart component here</div>
+
         </DocsLayout>
     );
 };

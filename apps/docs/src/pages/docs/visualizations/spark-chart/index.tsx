@@ -8,11 +8,11 @@ const Main = () => {
 
             <PageSectionHeader
                 pageTitle="Visualizations"
-                title="Bar Chart"
-                subTitle="An area chart displays quantitative data graphically. It is based on the line chart but the area between x-axis and line is emphasized with color."/>
+                title="Spark Chart"
+                subTitle="A spark chart is a small, simple line or bar chart designed to provide a quick view of data trends. Often embedded within tables or dashboards, it adds context without taking up much space."/>
 
-           <div>Bar Chart component here</div>
-            
+            <div>Bar Chart component here</div>
+
         </DocsLayout>
     );
 };

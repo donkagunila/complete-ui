@@ -8,11 +8,11 @@ const Main = () => {
 
             <PageSectionHeader
                 pageTitle="Visualizations"
-                title="Bar Chart"
-                subTitle="An area chart displays quantitative data graphically. It is based on the line chart but the area between x-axis and line is emphasized with color."/>
+                title="Funnel Chart"
+                subTitle="A funnel chart represents stages in a process, with each stage depicted as a section of a funnel. It's commonly used to visualize sales processes or other sequential data where quantities decrease with each step."/>
 
-           <div>Bar Chart component here</div>
-            
+            <div>Bar Chart component here</div>
+
         </DocsLayout>
     );
 };

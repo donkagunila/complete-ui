@@ -9,10 +9,10 @@ const Main = () => {
             <PageSectionHeader
                 pageTitle="Visualizations"
                 title="Bar Chart"
-                subTitle="An area chart displays quantitative data graphically. It is based on the line chart but the area between x-axis and line is emphasized with color."/>
+                subTitle="A bar chart displays data using rectangular bars to represent values. The length or height of each bar is proportional to the value it represents, making it easy to compare quantities across different categories."/>
 
-           <div>Bar Chart component here</div>
-            
+            <div>Bar Chart component here</div>
+
         </DocsLayout>
     );
 };

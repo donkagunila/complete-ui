@@ -8,11 +8,11 @@ const Main = () => {
 
             <PageSectionHeader
                 pageTitle="Visualizations"
-                title="Bar Chart"
-                subTitle="An area chart displays quantitative data graphically. It is based on the line chart but the area between x-axis and line is emphasized with color."/>
+                title="Tracker"
+                subTitle="A tracker chart monitors specific metrics or key performance indicators (KPIs) over time. It’s commonly used for tracking progress towards a target or goal."/>
 
-           <div>Bar Chart component here</div>
-            
+            <div>Bar Chart component here</div>
+
         </DocsLayout>
     );
 };

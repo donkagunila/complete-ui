@@ -8,11 +8,11 @@ const Main = () => {
 
             <PageSectionHeader
                 pageTitle="Visualizations"
-                title="Bar Chart"
-                subTitle="An area chart displays quantitative data graphically. It is based on the line chart but the area between x-axis and line is emphasized with color."/>
+                title="Data Bars"
+                subTitle="Data bars are bars displayed within cells, often in tables, that help users quickly compare values visually. The length of each bar is proportional to the value it represents within the dataset."/>
 
-           <div>Bar Chart component here</div>
-            
+            <div>Bar Chart component here</div>
+
         </DocsLayout>
     );
 };
