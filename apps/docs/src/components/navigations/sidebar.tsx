@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import Link from "next/link";
 import {useRouter} from "next/router";
 import {twMerge} from "tailwind-merge";
@@ -15,6 +15,17 @@ type MenuGroup = {
 const Sidebar = () => {
 
     const {asPath} = useRouter();
+    const menuRefs = useRef<(HTMLDivElement | null)[]>([]);
+    const setMenuRef = (index: number, el: HTMLDivElement | null) => {
+        menuRefs.current[index] = el;
+    };
+
+    const handleClick = (index: number) => {
+        const menuRef = menuRefs.current[index];
+        if (menuRef) {
+            menuRef.scrollIntoView({behavior: "smooth", block: "end", inline: "nearest"});
+        }
+    };
 
     const menuGroups: MenuGroup[] = [
         {
@@ -77,8 +88,12 @@ const Sidebar = () => {
 
     return (
         <div>
-            {menuGroups.map((menuGroup: MenuGroup) => (
-                <div key={menuGroup.title} className="mb-4">
+            {menuGroups.map((menuGroup: MenuGroup, index: number) => (
+                <div
+                    key={menuGroup.title}
+                    className="mb-4"
+                    ref={(el) => setMenuRef(index, el)}
+                >
                     <h4 className="w-full cursor-default">
                         <div className="flex justify-between">
                             <p className="mb-4 text-lg font-semibold tracking-wide text-slate-800 md:text-sm capitalize">
@@ -89,7 +104,7 @@ const Sidebar = () => {
                     <ul>
                         {menuGroup.menuItems.map((menu: MenuItem) => (
                             <li key={menu.path} className="items-center">
-                                <Link href={menu.path}>
+                                <Link href={menu.path} onClick={() => handleClick(index)}>
                                     <span className={twMerge([
                                         "relative ml-1 block border-l-2 py-1.5 pl-4 font-normal transition-all md:text-sm",
                                         asPath == menu.path && "border-current text-blue-500"

@@ -9,7 +9,7 @@ const Main = () => {
             <div>
                 <PageSectionHeader
                     pageTitle="UI"
-                    title="Calendar"
+                    title="List"
                     subTitle="A window overlaid on either the primary window or another dialog window, rendering the content underneath inert."/>
             </div>
 
