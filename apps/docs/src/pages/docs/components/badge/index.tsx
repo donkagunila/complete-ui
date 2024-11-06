@@ -15,10 +15,9 @@ const Main = () => {
 
                 <div className="border border-slate-200 py-12 px-5 rounded-md">
                     <div className="flex gap-2 justify-center items-center">
-                        <Badge variant="default">Default</Badge>
-                        <Badge variant="success">Success</Badge>
                         <Badge variant="primary">Primary</Badge>
                         <Badge variant="secondary">Secondary</Badge>
+                        <Badge variant="success">Success</Badge>
                         <Badge variant="error">Error</Badge>
                         <Badge variant="warning">Warning</Badge>
                     </div>
