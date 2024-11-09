@@ -25,3 +25,7 @@ body {
 .cursor-pointer {
     cursor: pointer !important;
 }
+
+.presentation-box {
+    @apply border border-slate-200 py-12 px-5 rounded-md;
+}

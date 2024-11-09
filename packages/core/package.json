@@ -1,26 +1,42 @@
 {
   "name": "@complete-ui/core",
-  "version": "0.0.0",
-  "private": true,
-  "exports": {
-    "./styles.css": "./dist/button.css",
-    "./button": "./src/button.tsx",
-    "./card": "./src/card.tsx",
-    "./code": "./src/code.tsx",
-    ".": "./src/index.ts"
+  "version": "0.0.1-beta-1.1",
+  "description": "The React UI library to build web applications faster.",
+  "private": false,
+  "license": "Apache 2.0",
+  "author": {
+    "name": "Donald Kagunila",
+    "url": "https://www.linkedin.com/in/donkagunila/"
   },
+  "exports": {
+    ".": {
+      "import": "./dist/index.esm.js",
+      "require": "./dist/index.cjs.js",
+      "default": "./dist/index.esm.js"
+    },
+    "./dist/index.css": "./dist/index.css"
+  },
+  "main": "./dist/index.cjs.js",
+  "module": "./dist/index.esm.js",
+  "types": "./dist/index.d.ts",
   "sideEffects": [
     "./**/*.css"
   ],
   "scripts": {
+    "rollup": "rollup -c",
     "lint": "eslint . --max-warnings 0",
     "generate:component": "turbo gen react-component",
-    "build": "tsup",
-    "dev": "tsup --watch"
+    "build": "rollup -c",
+    "dev": "rollup -c --watch"
   },
   "devDependencies": {
+    "@babel/preset-react": "^7.25.9",
+    "@babel/preset-typescript": "^7.26.0",
     "@complete-ui/eslint-config": "*",
     "@complete-ui/typescript-config": "*",
+    "@rollup/plugin-babel": "^6.0.4",
+    "@rollup/plugin-terser": "^0.4.4",
+    "@rollup/plugin-typescript": "^12.1.1",
     "@turbo/gen": "^1.12.4",
     "@types/eslint": "^8.56.5",
     "@types/node": "^20.11.24",
@@ -29,19 +45,40 @@
     "autoprefixer": "^10.4.20",
     "eslint": "^8.57.0",
     "postcss": "^8.4.47",
+    "rollup-plugin-preserve-directives": "^0.4.0",
+    "rollup-plugin-typescript-paths": "^1.5.0",
     "tailwindcss": "^3.4.14",
     "tsup": "^8.3.5",
     "typescript": "5.5.4"
   },
   "dependencies": {
+    "@radix-ui/react-accordion": "^1.2.1",
+    "@radix-ui/react-checkbox": "^1.1.2",
     "@radix-ui/react-dialog": "^1.1.2",
+    "@radix-ui/react-label": "^2.1.0",
+    "@radix-ui/react-popover": "^1.1.2",
+    "@remixicon/react": "^4.5.0",
+    "@rollup/plugin-commonjs": "^28.0.1",
+    "@rollup/plugin-node-resolve": "^15.3.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
+    "date-fns": "^4.1.0",
     "lucide-react": "^0.454.0",
     "react": "^18.2.0",
+    "react-day-picker": "^9.3.0",
     "react-spinners": "^0.14.1",
+    "rollup": "^4.24.4",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-postcss": "^4.0.2",
     "tailwind-merge": "^2.5.4",
     "tailwind-variants": "^0.2.1",
     "tailwindcss-animate": "^1.0.7"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "files": [
+    "dist",
+    "dist/index.css"
+  ]
 }
