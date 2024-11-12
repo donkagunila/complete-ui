@@ -1,11 +1,7 @@
 import { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
-type Variant =
-  | "primary"
-  | "accent"
-  | "secondary"
-  | "success"
+type Variant = "primary" | "accent" | "secondary" | "success"
   | "warning"
   | "pending"
   | "danger"
@@ -32,20 +28,16 @@ type Variant =
   | "linkedin";
 
 
-type Elevated = boolean;
 type Size = "sm" | "lg";
-type Rounded = boolean;
 
 interface ButtonProps {
   children: ReactNode;
   size?: Size;
-  rounded?: Rounded;
   variant?: Variant;
-  elevated?: Elevated;
   className?: string;
 }
 
-const Button = ({ children, className, elevated, variant, rounded, size }: ButtonProps) => {
+const Button = ({ children, className, variant, size }: ButtonProps) => {
 
   const small = ["text-xs py-1.5 px-2"];
   const large = ["text-lg py-1.5 px-4"];
