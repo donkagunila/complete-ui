@@ -78,7 +78,7 @@ const Sidebar = () => {
 
 
   return (
-    <div>
+    <div className="">
       {menuGroups.map((menuGroup: MenuGroup, index: number) => (
         <div
           key={menuGroup.title}
