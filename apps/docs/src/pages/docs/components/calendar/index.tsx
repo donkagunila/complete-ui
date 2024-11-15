@@ -1,7 +1,6 @@
 import React from "react";
 import DocsLayout from "@/components/layouts/DocsLayout";
 import PageSectionHeader from "@/components/app/page-section-header";
-import { Calendar } from "@complete-ui/core";
 
 
 const Main = () => {
@@ -15,10 +14,10 @@ const Main = () => {
       </div>
 
       <div className="flex border border-slate-200 py-12 px-5 rounded-md justify-center">
-        <Calendar
-          mode="single"
-          initialFocus
-          className="border rounded-md" />
+        {/*<Calendar*/}
+        {/*  mode="single"*/}
+        {/*  initialFocus*/}
+        {/*  className="border rounded-md" />*/}
       </div>
 
 
