@@ -37,7 +37,7 @@ interface ButtonProps {
   className?: string;
 }
 
-const Button = ({ children, className, variant, size }: ButtonProps) => {
+const Button = ({ children, className = "", variant, size = "sm" }: ButtonProps) => {
 
   const small = ["text-xs py-1.5 px-2"];
   const large = ["text-lg py-1.5 px-4"];
