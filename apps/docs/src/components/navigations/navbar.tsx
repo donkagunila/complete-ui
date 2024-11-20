@@ -6,11 +6,11 @@ import { twMerge } from "tailwind-merge";
 
 const navigation = [
   { name: "Docs", href: "/docs/getting-started/installation" },
-  { name: "Blocks", href: "/blocks" },
-  { name: "Charts", href: "/charts" },
+  // { name: "Blocks", href: "/blocks" },
+  // { name: "Charts", href: "/charts" },
   { name: "icons", href: "/icons" },
   { name: "Colors", href: "/colors" },
-  { name: "Templates", href: "/templates" },
+  // { name: "Templates", href: "/templates" },
 ];
 
 

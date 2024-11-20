@@ -1,12 +1,21 @@
 {
   "name": "@complete-ui/core",
-  "version": "0.0.1-beta-1.1",
+  "version": "0.0.1-beta-1.2",
   "description": "The React UI library to build web applications faster.",
   "private": false,
   "license": "Apache 2.0",
+  "homepage": "https://github.com/donkagunila/complete-ui#readme",
+  "bugs": {
+    "url": "https://github.com/donkagunila/complete-ui/issues"
+  },
   "author": {
     "name": "Donald Kagunila",
     "url": "https://www.linkedin.com/in/donkagunila/"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/donkagunila/complete-ui.git",
+    "directory": "packages/core"
   },
   "exports": {
     ".": {

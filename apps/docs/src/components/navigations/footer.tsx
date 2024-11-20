@@ -7,7 +7,7 @@ const Footer = () => {
       <div className="mx-auto max-w-7xl px-4 lg:px-8">
         <h2 id="footer-heading" className="sr-only">Footer</h2>
         <div className="grid grid-cols-2 gap-x-8 gap-y-12 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6">
-          <div className=""><h3
+          <div className="hidden"><h3
             className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">Charts &amp; Helpers</h3>
             <ul role="list" className="mt-4 space-y-2">
               <li><Link
@@ -27,7 +27,7 @@ const Footer = () => {
                 href="/blocks/chart-tooltips"><span>Chart Tooltips</span></Link></li>
             </ul>
           </div>
-          <div className=""><h3
+          <div className="hidden"><h3
             className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">Advanced
             Visualizations</h3>
             <ul role="list" className="mt-4 space-y-2">
@@ -48,7 +48,7 @@ const Footer = () => {
                 href="/blocks/chart-compositions"><span>Chart Compositions</span></Link></li>
             </ul>
           </div>
-          <div className=""><h3
+          <div className="hidden"><h3
             className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">Inputs &amp; Forms</h3>
             <ul role="list" className="mt-4 space-y-2">
               <li><Link
@@ -59,7 +59,7 @@ const Footer = () => {
                 href="/blocks/file-upload"><span>File Uploads</span></Link></li>
             </ul>
           </div>
-          <div className=""><h3
+          <div className="hidden"><h3
             className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">Tables</h3>
             <ul role="list" className="mt-4 space-y-2">
               <li><Link
@@ -73,7 +73,7 @@ const Footer = () => {
                 href="/blocks/table-pagination"><span>Table Pagination</span></Link></li>
             </ul>
           </div>
-          <div className=""><h3
+          <div className="hidden"><h3
             className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">Layout &amp; Forms</h3>
             <ul role="list" className="mt-4 space-y-2">
               <li><Link
@@ -99,7 +99,7 @@ const Footer = () => {
                 href="/blocks/badges"><span>Badges</span></Link></li>
             </ul>
           </div>
-          <div className=""><h3
+          <div className="hidden"><h3
             className="text-sm font-semibold leading-6 text-gray-900 dark:text-gray-50">Marketing</h3>
             <ul role="list" className="mt-4 space-y-2">
               <li><Link

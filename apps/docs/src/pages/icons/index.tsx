@@ -1,17 +1,21 @@
-import React, { useState } from "react";
+import React from "react";
 import AppLayout from "@/components/layouts/AppLayout";
 import PageSectionHeader from "@/components/app/page-section-header";
 
 import { icons } from "lucide-react";
+import { useCopyToClipboard } from "react-use";
+import { toast } from "sonner";
 
 
 const BlocksPage = () => {
+  
+  const [state, copyToClipboard] = useCopyToClipboard();
 
-  const icon = icons;
 
-
-  console.log(Object.entries(icon));
-  const [isOpen, setIsOpen] = useState(false);
+  const copyIcon = (text: string) => {
+    copyToClipboard(text);
+    toast.success(`Icon ${text} copied to clipboard`);
+  };
 
   return (
     <AppLayout>
@@ -25,12 +29,6 @@ const BlocksPage = () => {
         />
 
         <section className="mt-16 scroll-mt-20">
-
-
-          <button onClick={() => setIsOpen(true)} className="px-4 py-2 bg-blue-500 text-white rounded-md">
-            Open Dialog
-          </button>
-
 
           <div className="grid scroll-mt-20 gap-8">
             <div>
@@ -51,12 +49,16 @@ const BlocksPage = () => {
                 </div>
               </div>
 
-              <div className="grid grid-cols-12 gap-2 p-2 overflow-hidden">
+              <div className="flex flex-wrap justify-around gap-2 p-2 overflow-hidden">
                 {Object.entries(icons).map(([iconName, IconComponent]) => (
                   <div key={iconName}
-                       className="-z-0 flex flex-col items-center h-[70px] w-[70px]  justify-center p-2 border rounded text-slate-600 hover:border-primary hover:bg-primary hover:text-white transition duration-300 cursor-pointer">
+                       onClick={() => copyIcon(iconName)}
+                       className="-z-0 flex flex-col items-center overflow-ellipsis h-[100px] w-[100px] text-[0.6rem] gap-3 justify-center p-2 overflow-hidden border rounded text-slate-600 hover:border-primary hover:bg-primary hover:text-white transition duration-300 cursor-pointer">
+                    <span
+                      className="m-2 gap-3 flex overflow-hidden justify-center items-center flex-col overflow-ellipsis">
                     <IconComponent size={20} />
-                    {/*<span className="text-xs mt-2 text-slate-500">{iconName}</span>*/}
+                    <span>{iconName}</span>
+                      </span>
                   </div>
                 ))}
               </div>
