@@ -5,7 +5,7 @@
     <picture>
        <img alt="Complete Ui Logo" src="images/logo-light.svg" height="50"/>
     </picture>
-  </a>
+  </Link>
 </p>
 <div align="center">
 <br />

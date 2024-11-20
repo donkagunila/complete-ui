@@ -1,4 +1,5 @@
 @import "_monaSans.css";
+@import "prism.css";
 
 @tailwind base;
 @tailwind components;

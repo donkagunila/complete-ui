@@ -16,10 +16,15 @@
     "@next/mdx": "^15.0.2",
     "@remixicon/react": "^4.5.0",
     "@types/mdx": "^2.0.13",
+    "babel-plugin-prismjs": "^2.1.0",
     "lucide-react": "^0.454.0",
     "next": "14.2.6",
+    "prism-react-renderer": "^2.4.0",
+    "prismjs": "^1.29.0",
     "react": "18.3.1",
+    "react-code-block": "^1.0.1",
     "react-dom": "18.3.1",
+    "react-use": "^17.5.1",
     "sonner": "^1.5.0",
     "tailwind-merge": "^2.5.4"
   },
@@ -33,6 +38,7 @@
     "eslint-config-next": "^14.2.6",
     "react": "18.3.1",
     "react-dom": "18.3.1",
+    "react-syntax-highlighter": "^15.6.1",
     "sonner": "^1.5.0",
     "typescript": "5.5.4"
   }
