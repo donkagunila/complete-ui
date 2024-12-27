@@ -1,5 +1,6 @@
 import React from "react";
 import { twMerge } from "tailwind-merge";
+import { Sizes } from "../lib/types";
 
 
 type badgeVariants = "primary" | "success" | "error" | "warning" | "secondary"
@@ -8,11 +9,13 @@ interface BadgeProps
   extends React.ComponentPropsWithoutRef<"span"> {
   children: React.ReactNode;
   variant: badgeVariants;
+  size?: string;
 }
 
-const Badge: React.FC<BadgeProps> = ({ className, variant, children, ...props }: BadgeProps) => {
+const Badge: React.FC<BadgeProps> = (props: BadgeProps) => {
+  const { className, variant, size = Sizes.SM, children, ...others } = props;
 
-  const generalStyles = ["inline-flex items-center gap-x-1 whitespace-nowrap rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset"];
+  const generalStyles = ["w-max shrink-0 inline-flex items-center gap-x-1 whitespace-nowrap rounded-md px-2 py-1 text-xs font-medium ring-1 ring-inset"];
   const defaultStyles = ["bg-blue-50 text-blue-900 ring-blue-500/30", "dark:bg-blue-400/10 dark:text-blue-400 dark:ring-blue-400/30"];
   const successStyles = [
     "bg-emerald-50 text-emerald-900 ring-emerald-600/30",
@@ -41,6 +44,11 @@ const Badge: React.FC<BadgeProps> = ({ className, variant, children, ...props }:
         variant === "warning" && warningStyles,
         variant === "error" && errorStyle,
         variant === "secondary" && neutralStyles,
+        size === Sizes.XS && "py-0.5 text-xs",
+        size === Sizes.SM && "py-1 text-sm",
+        size === Sizes.MD && "py-1.5 text-sm",
+        size === Sizes.LG && "py-2 text-base",
+        size === Sizes.XL && "py-2.5 text-base",
         className])}
       {...props}
     >

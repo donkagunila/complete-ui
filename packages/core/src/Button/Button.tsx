@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import React, { ReactNode } from "react";
 import { twMerge } from "tailwind-merge";
 
 type Variant = "primary" | "accent" | "secondary" | "success"
@@ -30,14 +30,14 @@ type Variant = "primary" | "accent" | "secondary" | "success"
 
 type Size = "sm" | "lg";
 
-interface ButtonProps {
+interface ButtonProps extends React.ButtonHTMLAttributes<HTMLButtonElement> {
   children: ReactNode;
   size?: Size;
   variant?: Variant;
   className?: string;
 }
 
-const Button = ({ children, className = "", variant, size = "sm" }: ButtonProps) => {
+const Button = ({ children, className = "", variant, size = "sm", ...props }: ButtonProps) => {
 
   const small = ["text-xs py-1.5 px-2"];
   const large = ["text-lg py-1.5 px-4"];
@@ -197,7 +197,7 @@ const Button = ({ children, className = "", variant, size = "sm" }: ButtonProps)
 
   return (
     <button
-      type="button"
+      {...props}
       className={twMerge([
         generalStyles,
         size === "sm" && small,

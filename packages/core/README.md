@@ -15,6 +15,9 @@
     <img alt="npm" src="https://img.shields.io/npm/dm/@complete-ui/core?color=22c55e&label=npm&logo=npm&labelColor=334155">
   </a>
  <a href="https://github.com/donkagunila/complete-ui/blob/main/License.txt">
+    <img alt="Version" src="https://img.shields.io/npm/v/@complete-ui/core?style=flat&color=22c55e&labelColor=334155 " height="20" width="auto">
+  </a>
+<a href="https://github.com/donkagunila/complete-ui/blob/main/License.txt">
     <img alt="License Apache 2.0" src="https://img.shields.io/badge/license-Apache 2.0-blue.svg?style=flat&color=22c55e&labelColor=334155 " height="20" width="auto">
   </a>
 </div>
@@ -29,7 +32,8 @@
 
 ## Getting Started
 
-See our [Installation Guide](https://github.com/donkagunila/complete-ui/blob/main/README.md). To make use of the library
+See our [Installation Guide](https://complete-ui-docs.vercel.app/docs/getting-started/installation). To make use of the
+library
 we
 also need Tailwind CSS setup in the project.
 
