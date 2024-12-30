@@ -45,12 +45,12 @@ const Sidebar = () => {
     {
       title: "UI",
       menuItems: [
-        // { name: "Accordion", path: "/docs/components/accordion" },
+        { name: "Accordion", path: "/docs/components/accordion" },
         { name: "Badges", path: "/docs/components/badge" },
         { name: "Buttons", path: "/docs/components/button" },
-        // { name: "Calendar", path: "/docs/components/calendar" },
-        // { name: "Checkbox", path: "/docs/components/checkbox" },
-        // { name: "Callout", path: "/docs/components/callout" },
+        { name: "Calendar", path: "/docs/components/calendar" },
+        { name: "Checkbox", path: "/docs/components/checkbox" },
+        { name: "Callout", path: "/docs/components/callout" },
         // { name: "Card", path: "/docs/components/card" },
         // { name: "Date Picker", path: "/docs/components/date-picker" },
         // { name: "Date Range Picker", path: "/docs/components/date-range-picker" },
